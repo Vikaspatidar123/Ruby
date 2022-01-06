@@ -1,0 +1,27 @@
+
+<body style="background-color:#ffff99;"><center>
+
+<button><%=link_to("BACK TO LIST",students_path, :class => 'back-link') %></button>
+
+<h1>Update Student</h1>
+<%= form_for(@student,:url => student_path(@student),:method => 'patch')do |f|%>
+<table class='table'>
+<tr>
+<th>Name</th>
+<th><%= f.text_field(:name)%></th>
+</tr><tr>
+<th>Email</th>
+<th><%= f.text_field(:email)%></th>
+</tr>
+<tr>
+<th>Phone</th>
+<th><%= f.text_field(:phone)%></th>
+</tr>
+
+</table>
+<div class="form-buttons">
+<%= f.submit("Update Subject")%>
+</div>
+<%end%>
+</center>
+</body>

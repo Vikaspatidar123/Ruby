@@ -1,0 +1,21 @@
+<body style="background-color:#ffff99;"><center>
+<p style="color: green"><%= notice %></p>
+
+<button><%=link_to("BACK TO LIST",'/students', :class => 'back-link') %></button>
+<h1>Show Student</h1>
+<table class='table' style="border:1px solid;">
+<tr style="border:1px solid;">
+<th style="border:1px solid;">Name</th>
+<th style="border:1px solid;"><%= @student.name%></th>
+</tr><tr>
+<th style="border:1px solid;">Email</th>
+<th style="border:1px solid;"><%= @student.email%></th>
+</tr>
+<tr style="border:1px solid;">
+<th style="border:1px solid;">Phone</th>
+<th style="border:1px solid;"><%= @student.phone%></th>
+</tr>
+
+</table>
+</center>
+</body>

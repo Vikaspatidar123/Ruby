@@ -1,0 +1,15 @@
+<body style="background-color:#ffff99;"><center>
+
+<button><%=link_to("BACK TO LIST",students_path, :class => 'back-link') %></button>
+
+<h1>Delete Student</h1>
+<%= form_for(@student,:url => student_path(@student),:method => 'delete')do |f|%>
+<p>Are you sure want to delete this student</p>
+<p><%= @student.name%></p>
+
+<div class="form-button">
+<%= f.submit("Delete Student")%>
+</div>
+<%end%>
+</center>
+</body>
